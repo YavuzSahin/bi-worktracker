@@ -1,0 +1,39 @@
+name: worktracker_pro
+description: A comprehensive remote work tracking application with GPS monitoring and multilingual support.
+publish_to: 'none'
+version: 2.0.0+1
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  
+  # UI & Navigation
+  cupertino_icons: ^1.0.6
+  
+  # State Management & HTTP
+  http: ^1.1.0
+  
+  # Local Storage
+  shared_preferences: ^2.2.2
+  
+  # Location Services
+  geolocator: ^10.1.0
+  permission_handler: ^11.0.1
+  
+  # Device Information
+  device_info_plus: ^9.1.1
+  package_info_plus: ^4.2.0
+  
+  # Date & Time Formatting
+  intl: ^0.18.1
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^3.0.0
+
+flutter:
+  uses-material-design: true
