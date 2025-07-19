@@ -42,7 +42,7 @@ class BIWorkTrackerApp extends StatelessWidget {
 // API Service Class
 class ApiService {
   // Production URL - Update this when deploying to custom domain
-  static const String baseUrl = 'https://workspace.yavuzsahins.repl.co';
+  static const String baseUrl = 'https://remote-worktracker.replit.app';
   // For production deployment, replace with: 'https://yourdomain.com'
   
   static String? _token;
