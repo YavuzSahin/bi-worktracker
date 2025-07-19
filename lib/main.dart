@@ -12,14 +12,14 @@ import 'package:device_info_plus/device_info_plus.dart';
 import 'package:package_info_plus/package_info_plus.dart';
 
 void main() {
-  runApp(WorkTrackerApp());
+  runApp(BIWorkTrackerApp());
 }
 
-class WorkTrackerApp extends StatelessWidget {
+class BIWorkTrackerApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'WorkTracker Pro',
+      title: 'BI WorkTracker',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         primarySwatch: Colors.blue,
@@ -41,7 +41,9 @@ class WorkTrackerApp extends StatelessWidget {
 
 // API Service Class
 class ApiService {
+  // Production URL - Update this when deploying to custom domain
   static const String baseUrl = 'https://workspace.yavuzsahins.repl.co';
+  // For production deployment, replace with: 'https://yourdomain.com'
   
   static String? _token;
   static User? _currentUser;
@@ -335,8 +337,15 @@ class _SplashScreenState extends State<SplashScreen> {
               color: Colors.white,
             ),
             SizedBox(height: 24),
+            Image.asset(
+              'assets/images/logo.png',
+              height: 120,
+              width: 200,
+              fit: BoxFit.contain,
+            ),
+            SizedBox(height: 24),
             Text(
-              'WorkTracker Pro',
+              'BI WorkTracker',
               style: TextStyle(
                 fontSize: 32,
                 fontWeight: FontWeight.bold,
@@ -345,7 +354,7 @@ class _SplashScreenState extends State<SplashScreen> {
             ),
             SizedBox(height: 16),
             Text(
-              'Remote Work Tracking System',
+              'Professional Work Tracking System',
               style: TextStyle(
                 fontSize: 16,
                 color: Colors.white70,
@@ -426,14 +435,16 @@ class _LoginScreenState extends State<LoginScreen> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Icon(
-                Icons.access_time,
-                size: 80,
-                color: Colors.blue.shade600,
+              Container(
+                height: 80,
+                child: Image.asset(
+                  'assets/images/logo.png',
+                  fit: BoxFit.contain,
+                ),
               ),
               SizedBox(height: 24),
               Text(
-                'WorkTracker Pro',
+                'BI WorkTracker',
                 style: TextStyle(
                   fontSize: 28,
                   fontWeight: FontWeight.bold,
@@ -683,7 +694,7 @@ class _MobileDashboardState extends State<MobileDashboard> {
     
     return Scaffold(
       appBar: AppBar(
-        title: Text('WorkTracker Pro'),
+        title: Text('BI WorkTracker'),
         actions: [
           IconButton(
             icon: Icon(Icons.logout),
@@ -858,7 +869,7 @@ class _AdminDashboardState extends State<AdminDashboard> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Admin Dashboard'),
+        title: Text('BI WorkTracker Admin'),
         actions: [
           IconButton(
             icon: Icon(Icons.logout),
@@ -879,7 +890,7 @@ class _AdminDashboardState extends State<AdminDashboard> {
             Icon(Icons.admin_panel_settings, size: 80, color: Colors.blue.shade600),
             SizedBox(height: 24),
             Text(
-              'Admin Dashboard',
+              'BI WorkTracker Admin',
               style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
             ),
             SizedBox(height: 16),

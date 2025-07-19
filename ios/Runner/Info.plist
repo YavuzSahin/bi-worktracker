@@ -5,7 +5,7 @@
     <key>CFBundleDevelopmentRegion</key>
     <string>$(DEVELOPMENT_LANGUAGE)</string>
     <key>CFBundleDisplayName</key>
-    <string>WorkTracker Pro</string>
+    <string>BI WorkTracker</string>
     <key>CFBundleExecutable</key>
     <string>$(EXECUTABLE_NAME)</string>
     <key>CFBundleIdentifier</key>
@@ -13,7 +13,7 @@
     <key>CFBundleInfoDictionaryVersion</key>
     <string>6.0</string>
     <key>CFBundleName</key>
-    <string>worktracker_pro</string>
+    <string>bi_worktracker</string>
     <key>CFBundlePackageType</key>
     <string>APPL</string>
     <key>CFBundleShortVersionString</key>
@@ -44,11 +44,11 @@
     
     <!-- Location permissions -->
     <key>NSLocationWhenInUseUsageDescription</key>
-    <string>WorkTracker Pro needs location access to track your work location for accurate time logging.</string>
+    <string>BI WorkTracker needs location access to track your work location for accurate time logging.</string>
     <key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
-    <string>WorkTracker Pro needs location access to track your work location for accurate time logging.</string>
+    <string>BI WorkTracker needs location access to track your work location for accurate time logging.</string>
     <key>NSLocationAlwaysUsageDescription</key>
-    <string>WorkTracker Pro needs location access to track your work location for accurate time logging.</string>
+    <string>BI WorkTracker needs location access to track your work location for accurate time logging.</string>
     
     <!-- Background processing -->
     <key>UIBackgroundModes</key>

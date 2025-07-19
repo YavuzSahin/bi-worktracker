@@ -1,6 +1,6 @@
-# WorkTracker Pro - Flutter Mobile App
+# BI WorkTracker - Flutter Mobile App
 
-A comprehensive production-ready Flutter application for remote work tracking with GPS monitoring and real-time synchronization with the web platform.
+A comprehensive production-ready Flutter application for professional remote work tracking with GPS monitoring and real-time synchronization with the web platform.
 
 ## 🚀 Features
 
