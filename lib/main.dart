@@ -24,6 +24,7 @@ class BIWorkTrackerApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
         useMaterial3: true,
+        fontFamily: 'Inter', // Using Inter font like Replit
         colorScheme: ColorScheme.fromSeed(
           seedColor: Colors.blue,
           brightness: Brightness.light,
@@ -33,6 +34,17 @@ class BIWorkTrackerApp extends StatelessWidget {
           foregroundColor: Colors.white,
           elevation: 2,
         ),
+        textTheme: TextTheme(
+          headlineLarge: TextStyle(fontFamily: 'Inter', fontWeight: FontWeight.w600),
+          headlineMedium: TextStyle(fontFamily: 'Inter', fontWeight: FontWeight.w600),
+          headlineSmall: TextStyle(fontFamily: 'Inter', fontWeight: FontWeight.w600),
+          titleLarge: TextStyle(fontFamily: 'Inter', fontWeight: FontWeight.w600),
+          titleMedium: TextStyle(fontFamily: 'Inter', fontWeight: FontWeight.w500),
+          titleSmall: TextStyle(fontFamily: 'Inter', fontWeight: FontWeight.w500),
+          bodyLarge: TextStyle(fontFamily: 'Inter', fontWeight: FontWeight.w400),
+          bodyMedium: TextStyle(fontFamily: 'Inter', fontWeight: FontWeight.w400),
+          bodySmall: TextStyle(fontFamily: 'Inter', fontWeight: FontWeight.w400),
+        ),
       ),
       home: SplashScreen(),
     );
@@ -41,9 +53,12 @@ class BIWorkTrackerApp extends StatelessWidget {
 
 // API Service Class
 class ApiService {
-  // Production URL - Update this when deploying to custom domain
+  // CHANGE THIS URL TO MATCH YOUR WORKING DEPLOYMENT
   static const String baseUrl = 'https://remote-worktracker.replit.app';
-  // For production deployment, replace with: 'https://yourdomain.com'
+  
+  // Alternative working URLs (uncomment the one you need):
+  // static const String baseUrl = 'https://workspace.yavuzsahins.repl.co';  // Development
+  // static const String baseUrl = 'https://your-new-deployment.repl.co';    // New deployment
   
   static String? _token;
   static User? _currentUser;
@@ -326,43 +341,60 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.blue.shade600,
+      backgroundColor: Colors.white, // White background as requested
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Icon(
-              Icons.access_time,
-              size: 80,
-              color: Colors.white,
+            // Bigger logo as requested
+            Container(
+              padding: EdgeInsets.all(20),
+              decoration: BoxDecoration(
+                color: Colors.blue.shade600,
+                borderRadius: BorderRadius.circular(24),
+                boxShadow: [
+                  BoxShadow(
+                    color: Colors.blue.shade200,
+                    blurRadius: 20,
+                    offset: Offset(0, 8),
+                  ),
+                ],
+              ),
+              child: Icon(
+                Icons.favorite, // Heart icon
+                size: 60,
+                color: Colors.white,
+              ),
             ),
-            SizedBox(height: 24),
-            Image.asset(
-              'assets/images/logo.png',
-              height: 120,
-              width: 200,
-              fit: BoxFit.contain,
-            ),
-            SizedBox(height: 24),
+            SizedBox(height: 32),
+            // Bigger text logo
             Text(
               'BI WorkTracker',
               style: TextStyle(
                 fontSize: 32,
                 fontWeight: FontWeight.bold,
-                color: Colors.white,
+                color: Colors.grey.shade800, // Dark text on white background
+                fontFamily: 'Inter',
               ),
             ),
             SizedBox(height: 16),
             Text(
-              'Professional Work Tracking System',
+              'Remote Work Monitoring',
               style: TextStyle(
                 fontSize: 16,
-                color: Colors.white70,
+                color: Colors.grey.shade600,
+                fontFamily: 'Inter',
               ),
             ),
             SizedBox(height: 48),
-            CircularProgressIndicator(
-              valueColor: AlwaysStoppedAnimation<Color>(Colors.white),
+            // Loading indicator
+            SizedBox(
+              width: 40,
+              height: 40,
+              child: CircularProgressIndicator(
+                strokeWidth: 3,
+                valueColor: AlwaysStoppedAnimation<Color>(Colors.blue.shade600),
+              ),
             ),
           ],
         ),
